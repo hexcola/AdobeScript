@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">window.module = undefined</script>
+    <script src="../js/jquery/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="../js/cep/CSInterface.js"></script>
+  </head>
+  <body>
+
+  <div><input type="button" id="btnVersion" value="Test Version"></div>
+
+    <div>
+      <div class="unset">
+        Units
+        <select id="units" class="unset" name="units">
+          <option value="0">Points</option>
+          <option value="1">Picas</option>
+          <option value="2">Inches</option>
+          <option value="3">Millimeters</option>
+          <option value="4">Centimeters</option>
+        </select>
+      </div>
+      <div class="unset">
+        X: <input type="text" id="x" name="x" value="150">
+      </div>
+      <div class="unset">
+        Y: <input type="text" id="y" name="y" value="120">
+      </div>
+      <div class="unset">
+        Z: <input type="text" id="z" name="z" value="100">
+      </div>
+      <div class="unset">
+        Paste Width: <input type="text" id="pw" name="pw" value="10">
+      </div>
+
+      <div class="unset">
+        <input type="button" id="btnGen" name="name" value="Generate">
+      </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

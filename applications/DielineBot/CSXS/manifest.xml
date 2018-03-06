@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ExtensionManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="com.hexcola.gdb" ExtensionBundleVersion="1.0" Version="6.0"> <!-- MAJOR-VERSION-UPDATE-MARKER -->
+    <!--GDB stand for Graphic Design Bot-->
+    <ExtensionList>
+        <Extension Id="com.hexcola.gdb.DielineBot" Version="1.0"/>
+    </ExtensionList>
+    <ExecutionEnvironment>
+        <HostList>
+            <Host Name="ILST" Version="18.0"/>
+        </HostList>
+        <LocaleList>
+            <Locale Code="All"/>
+        </LocaleList>
+        <RequiredRuntimeList>
+            <RequiredRuntime Name="CSXS" Version="6.0"/> <!-- MAJOR-VERSION-UPDATE-MARKER -->
+        </RequiredRuntimeList>
+    </ExecutionEnvironment>
+    <DispatchInfoList>
+        <Extension Id="com.hexcola.gdb.DielineBot">
+            <DispatchInfo>
+                <Resources>
+                    <MainPath>./html/index.html</MainPath>
+                    <ScriptPath>./jsx/mockupgen.jsx</ScriptPath>
+                    <CEFCommandLine>
+                        <Parameter>--enable-speech-input</Parameter>
+						<Parameter>--enable-media-stream</Parameter>
+                    </CEFCommandLine>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                    <Type>Panel</Type>
+                    <Menu>Dieline Bot</Menu>
+                    <Geometry>
+                        <Size>
+                            <Height>580</Height>
+                            <Width>1000</Width>
+                        </Size>
+                        <MaxSize>
+                            <Height>800</Height>
+                            <Width>1200</Width>
+                        </MaxSize>
+                        <MinSize>
+                            <Height>400</Height>
+                            <Width>600</Width>
+                        </MinSize>
+                    </Geometry>
+                    <Icons>
+                        <Icon Type="Normal">./icon/TeEx_HTML_TEST_23x23_N.png</Icon>
+                        <Icon Type="RollOver">./icon/TeEx_HTML_TEST_23x23_R.png</Icon>
+                        <Icon Type="DarkNormal">./icon/TeEx_HTML_TEST_23x23_DN.png</Icon>
+                        <Icon Type="DarkRollOver">./icon/TeEx_HTML_TEST_23x23_DR.png</Icon>
+                    </Icons>
+                </UI>
+            </DispatchInfo>
+        </Extension>
+  </DispatchInfoList>
+</ExtensionManifest>
