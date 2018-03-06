@@ -1,0 +1,3694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: PageItem</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: PageItem</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>PageItem</h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="PageItem"><span class="type-signature"></span>new PageItem<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Any art item. Every art item and group in a document is a page item. You may refer to a page item as an element of a document, layer, or group item.The PageItem class gives you complete access to every art item contained in an Illustrator document. The PageItem class is the superclass of all artwork objects in a document. The CompoundPathItem, GroupItem, MeshItem, PathItem, PlacedItem, PluginItem, RasterItem, and TextFrame classes each inherit a set of properties from the PageItem class.You cannot create a PageItem directly, you must create one of the specific PageItem subclasses, such as PathItem.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line10">line 10</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="artworkKnockout"><span class="type-signature"></span>artworkKnockout<span class="type-signature"> :KnockoutState</span></h4>
+
+
+
+
+<div class="description">
+    Is this object used to create a knockout.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">KnockoutState</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line15">line 15</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="blendingMode"><span class="type-signature"></span>blendingMode<span class="type-signature"> :BlendModes</span></h4>
+
+
+
+
+<div class="description">
+    The mode to use when compositing this object. An object is considered composited when its opacity is set to less than 100.0 (100%).
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">BlendModes</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="controlBounds"><span class="type-signature"></span>controlBounds<span class="type-signature"> :rect</span></h4>
+
+
+
+
+<div class="description">
+    Read-only. The bounds of the object including stroke width and controls.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">rect</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line27">line 27</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="editable"><span class="type-signature"></span>editable<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    Read-only. If true, this page item is editable.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line33">line 33</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="geometricBounds"><span class="type-signature"></span>geometricBounds<span class="type-signature"> :rect</span></h4>
+
+
+
+
+<div class="description">
+    Read-only. The object’s bounds excluding the stroke width.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">rect</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line39">line 39</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="height"><span class="type-signature"></span>height<span class="type-signature"> :real</span></h4>
+
+
+
+
+<div class="description">
+    The height of the page item, calculated from the geometric bounds. Range: 0.0 to 16348.0
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">real</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line45">line 45</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="hidden"><span class="type-signature"></span>hidden<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    If true, this page item is hidden.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line51">line 51</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="isIsolated"><span class="type-signature"></span>isIsolated<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    If true, this object is isolated.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line57">line 57</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="layer"><span class="type-signature"></span>layer<span class="type-signature"> :<a href="Layer.html">Layer</a></span></h4>
+
+
+
+
+<div class="description">
+    Read-only. The layer to which this page item belongs.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="Layer.html">Layer</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line63">line 63</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="left"><span class="type-signature"></span>left<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    The left position of the art item. number (double)
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line69">line 69</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="locked"><span class="type-signature"></span>locked<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    If true, this page item is locked.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line75">line 75</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="name"><span class="type-signature"></span>name<span class="type-signature"> :string</span></h4>
+
+
+
+
+<div class="description">
+    The name of this page item.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line81">line 81</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="note"><span class="type-signature"></span>note<span class="type-signature"> :string</span></h4>
+
+
+
+
+<div class="description">
+    The note assigned to this item.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line87">line 87</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="opacity"><span class="type-signature"></span>opacity<span class="type-signature"> :real</span></h4>
+
+
+
+
+<div class="description">
+    The opacity of this object, where 100.0 is completely opaque and 0.0 is completely transparent.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">real</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line93">line 93</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="parent"><span class="type-signature"></span>parent<span class="type-signature"> :object</span></h4>
+
+
+
+
+<div class="description">
+    Read-only. The parent of this object.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line99">line 99</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="pixelAligned"><span class="type-signature"></span>pixelAligned<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    True if this item is aligned to the pixel grid.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line105">line 105</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="position"><span class="type-signature"></span>position<span class="type-signature"> :point</span></h4>
+
+
+
+
+<div class="description">
+    The position (in points) of the top left corner of the item in the format {x, y}. Does not include stroke weight.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">point</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line111">line 111</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="selected"><span class="type-signature"></span>selected<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    If true, this object is selected.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line117">line 117</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="sliced"><span class="type-signature"></span>sliced<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    If true, preserve slices.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line123">line 123</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="tags"><span class="type-signature"></span>tags<span class="type-signature"> :Tags</span></h4>
+
+
+
+
+<div class="description">
+    The collection of tags associated with this page item.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Tags</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line129">line 129</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="top"><span class="type-signature"></span>top<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    The top position of the art item. number (double)
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line135">line 135</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="typename"><span class="type-signature"></span>typename<span class="type-signature"> :string</span></h4>
+
+
+
+
+<div class="description">
+    Read-only. The class name of the object.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line141">line 141</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="URL"><span class="type-signature"></span>URL<span class="type-signature"> :string</span></h4>
+
+
+
+
+<div class="description">
+    The value of the Adobe URL tag assigned to this page item.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line147">line 147</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="visibilityVariable"><span class="type-signature"></span>visibilityVariable<span class="type-signature"> :anything</span></h4>
+
+
+
+
+<div class="description">
+    The visibility variable to which this page item path is bound.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">anything</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line153">line 153</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="visibleBounds"><span class="type-signature"></span>visibleBounds<span class="type-signature"> :rect</span></h4>
+
+
+
+
+<div class="description">
+    Read-only. The object’s visible bounds, including stroke width of any objects in the illustration.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">rect</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line159">line 159</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="width"><span class="type-signature"></span>width<span class="type-signature"> :real</span></h4>
+
+
+
+
+<div class="description">
+    The width of the page item, calculated from the geometric bounds. Range: 0.0 to 16348.0
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">real</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line165">line 165</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="wrapInside"><span class="type-signature"></span>wrapInside<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    If true, the text frame object should be wrapped inside this object.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line171">line 171</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="wrapOffset"><span class="type-signature"></span>wrapOffset<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    The offset to use when wrapping text around this object. number (double)
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line177">line 177</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="wrapped"><span class="type-signature"></span>wrapped<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    If true, wrap text frame objects around this object (text frame must be above the object).
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line183">line 183</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="zOrderPosition"><span class="type-signature"></span>zOrderPosition<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    Read-only. The drawing order of the art within its group or layer. number (long)
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line189">line 189</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="bringInPerspective"><span class="type-signature"></span>bringInPerspective<span class="signature">(posX, posY, perspectiveGridPlane)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Places art object(s) in a perspective grid at a specified position and grid plane.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>posX</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>posY</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>perspectiveGridPlane</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">PerspectiveGrid</span>
+|
+
+<span class="param-type">PlaneType</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line199">line 199</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="resize"><span class="type-signature"></span>resize<span class="signature">(scaleX, scaleY, changePositions, changeFillPatterns, changeFillGradients, changeStrokePattern, changeLineWidths, scaleAbout)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Scales art object(s).
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>scaleX</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">double</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scaleY</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">double</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>changePositions</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>changeFillPatterns</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>changeFillGradients</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>changeStrokePattern</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>changeLineWidths</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">double</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scaleAbout</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Transformation</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line212">line 212</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="rotate"><span class="type-signature"></span>rotate<span class="signature">(angle, changePositions, changeFillPatterns, changeFillGradients, changeStrokePattern, rotateAbout)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Rotates art object(s).
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>angle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">double</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>changePositions</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>changeFillPatterns</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>changeFillGradients</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>changeStrokePattern</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>rotateAbout</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Transformation</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line223">line 223</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="transform"><span class="type-signature"></span>transform<span class="signature">(transformationMatrix, changePositions, changeFillPatterns, changeFillGradients, changeStrokePattern, changeLineWidth, transformAbout)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Transforms art object:(s) using a transformation matrix.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>transformationMatrix</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">matrix</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>changePositions</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>changeFillPatterns</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>changeFillGradients</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>changeStrokePattern</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>changeLineWidth</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">double</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>transformAbout</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Transformation</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line236">line 236</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="translate"><span class="type-signature"></span>translate<span class="signature">(deltaX, deltaY, transformObjects, transformFillPatterns, transformFillGradents, transformStrokePattern)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Repositions art object(s).
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>deltaX</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">double</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>deltaY</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">double</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>transformObjects</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>transformFillPatterns</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>transformFillGradents</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>transformStrokePattern</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line248">line 248</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="zOrder"><span class="type-signature"></span>zOrder<span class="signature">(zOrderCmd)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Arranges the art relative to other art in the group or layer.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>zOrderCmd</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ZOrderMethod</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">No Description</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PageItem.js.html">PageItem.js</a>, <a href="PageItem.js.html#line255">line 255</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Application.html">Application</a></li><li><a href="Artboard.html">Artboard</a></li><li><a href="Artboards.html">Artboards</a></li><li><a href="Brush.html">Brush</a></li><li><a href="Brushes.html">Brushes</a></li><li><a href="CharacterAttributes.html">CharacterAttributes</a></li><li><a href="Characters.html">Characters</a></li><li><a href="CharacterStyle.html">CharacterStyle</a></li><li><a href="CharacterStyles.html">CharacterStyles</a></li><li><a href="CMYKColor.html">CMYKColor</a></li><li><a href="CompoundPathItem.html">CompoundPathItem</a></li><li><a href="CompoundPathItems.html">CompoundPathItems</a></li><li><a href="Dataset.html">Dataset</a></li><li><a href="Datasets.html">Datasets</a></li><li><a href="Document.html">Document</a></li><li><a href="DocumentPreset.html">DocumentPreset</a></li><li><a href="Documents.html">Documents</a></li><li><a href="EPSSaveOptions.html">EPSSaveOptions</a></li><li><a href="ExportOptionsAutoCAD.html">ExportOptionsAutoCAD</a></li><li><a href="ExportOptionsFlash.html">ExportOptionsFlash</a></li><li><a href="ExportOptionsGIF.html">ExportOptionsGIF</a></li><li><a href="ExportOptionsJPEG.html">ExportOptionsJPEG</a></li><li><a href="ExportOptionsPhotoshop.html">ExportOptionsPhotoshop</a></li><li><a href="ExportOptionsPNG8.html">ExportOptionsPNG8</a></li><li><a href="ExportOptionsPNG24.html">ExportOptionsPNG24</a></li><li><a href="ExportOptionsSVG.html">ExportOptionsSVG</a></li><li><a href="ExportOptionsTIFF.html">ExportOptionsTIFF</a></li><li><a href="FXGSaveOptions.html">FXGSaveOptions</a></li><li><a href="Gradient.html">Gradient</a></li><li><a href="GradientColor.html">GradientColor</a></li><li><a href="Gradients.html">Gradients</a></li><li><a href="GradientStop.html">GradientStop</a></li><li><a href="GradientStops.html">GradientStops</a></li><li><a href="GraphicStyle.html">GraphicStyle</a></li><li><a href="GraphicStyles.html">GraphicStyles</a></li><li><a href="GraphItem.html">GraphItem</a></li><li><a href="GraphItems.html">GraphItems</a></li><li><a href="GrayColor.html">GrayColor</a></li><li><a href="GroupItem.html">GroupItem</a></li><li><a href="GroupItems.html">GroupItems</a></li><li><a href="IllustratorSaveOptions.html">IllustratorSaveOptions</a></li><li><a href="ImageCaptureOptions.html">ImageCaptureOptions</a></li><li><a href="Ink.html">Ink</a></li><li><a href="InkInfo.html">InkInfo</a></li><li><a href="InsertionPoint.html">InsertionPoint</a></li><li><a href="InsertionPoints.html">InsertionPoints</a></li><li><a href="LabColor.html">LabColor</a></li><li><a href="Layer.html">Layer</a></li><li><a href="Layers.html">Layers</a></li><li><a href="LegacyTextItem.html">LegacyTextItem</a></li><li><a href="LegacyTextItems.html">LegacyTextItems</a></li><li><a href="Lines.html">Lines</a></li><li><a href="Matrix.html">Matrix</a></li><li><a href="MeshItem.html">MeshItem</a></li><li><a href="MeshItems.html">MeshItems</a></li><li><a href="NoColor.html">NoColor</a></li><li><a href="NonNativeItem.html">NonNativeItem</a></li><li><a href="NonNativeItems.html">NonNativeItems</a></li><li><a href="OpenOptions.html">OpenOptions</a></li><li><a href="OpenOptionsAutoCAD.html">OpenOptionsAutoCAD</a></li><li><a href="OpenOptionsFreeHand.html">OpenOptionsFreeHand</a></li><li><a href="OpenOptionsPhotoshop.html">OpenOptionsPhotoshop</a></li><li><a href="PageItem.html">PageItem</a></li><li><a href="PathItems.html">PathItems</a></li><li><a href="PathPoint.html">PathPoint</a></li><li><a href="PathPoints.html">PathPoints</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jan 24 2016 18:46:15 GMT+0800 (China Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: ExportOptionsSVG.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: ExportOptionsSVG.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Options for exporting a document as a SVG file, used with the exportFile method. All properties are optional.
+ * When you export a document, the appropriate file extension is appended automatically. You should not include any file extension in the file specification.
+ * @constructor
+ */
+function ExportOptionsSVG() {
+	/**
+	 * A range of artboards to save, if saveMultipleArtboards is true. A comma-delimited list of artboard names., or the empty string to save all artboards. Default: empty string
+	 * @type {string}
+	 */
+	this.artboardRange = "";
+	/**
+	 * If true, the exported file should be compressed. Default: false
+	 * @type {boolean}
+	 */
+	this.compressed = false;
+
+	/**
+	 * The decimal precision for element coordinate values. Range: 1 to 7. Default: 3 (long) 
+	 * @type {number}
+	 */
+	this.coordinatePrecision = 3;
+
+	/**
+	 * How the CSS properties of the document should be included in the exported file. Default: SVGCSSPropertyLocation.STYLEATTRIBUTES
+	 * @type {SVGCSSPropertyLocation}
+	 */
+	this.cssProperties = SVGCSSPropertyLocation.STYLEATTRIBUTES;
+
+	/**
+	 * How the text in the document should be encoded. Default: SVGDocumentEncoding.ASCII
+	 * @type {SVGDocumentEncoding}
+	 */
+	this.documentEncoding = SVGDocumentEncoding.ASCII;
+
+	/**
+	 * The SVG version to which the file should conform. Default: SVGDTDVersion.SVG1_1
+	 * @type {SVGDTDVersion}
+	 */
+	this.DTD = SVGDTDVersion.SVG1_1;
+
+	/**
+	 * If true, the raster images contained in the document should be embedded in the exported file. Default: false
+	 * @type {boolean}
+	 */
+	this.embedRasterImages = false;
+
+	/**
+	 * Which font glyphs should be included in the exported file. Default: SVGFontSubsetting.ALLGLYPHS
+	 * @type {SVGFontSubsetting}
+	 */
+	this.fontSubsetting = SVGFontSubsetting.ALLGLYPHS;
+
+	/**
+	 * The type of font to included in the exported file. Default: SVGFontType.CEFFONT
+	 * @type {SVGFontType}
+	 */
+	this.fontType = SVGFontType.CEFFONT;
+
+	/**
+	 * If true, file information should be saved in the exported file. Default: false
+	 * @type {boolean}
+	 */
+	this.includeFileInfo = false;
+
+	/**
+	 * If true, save unused styles in the exported file. Default: false
+	 * @type {boolean}
+	 */
+	this.includeUnusedStyles = false;
+
+	/**
+	 * If true, variables and datasets should be saved in the exported file. Default: false
+	 * @type {boolean}
+	 */
+	this.includeVariablesAndDatasets = false;
+
+	/**
+	 * If true, the exported file should be optimized for the SVG Viewer. Default: false
+	 * @type {boolean}
+	 */
+	this.optimizeForSVGViewer = false;
+
+	/**
+	 * If true, Illustrator editing capabilities should be preserved when exporting the document. Default: false
+	 * @type {boolean}
+	 */
+	this.preserveEditability = false;
+
+	/**
+	 * If true, save the artboards specified by artboardRange in the exported file. Default: false
+	 * @type {boolean}
+	 */
+	this.saveMultipleArtboards = false;
+
+	/**
+	 * If true, slice data should be exported with the file. Default: false
+	 * @type {boolean}
+	 */
+	this.slices = false;
+
+	/**
+	 * If true, SVG automatic kerning is allowed in the file. Default: false
+	 * @type {boolean}
+	 */
+	this.sVGAutoKerning = false;
+
+	/**
+	 * If true, the SVG text-on-path construct is allowed in the file. Default: false
+	 * @type {boolean}
+	 */
+	this.sVGTextOnPath = false;
+
+	/**
+	 * Read-only. The class name of the referenced object.
+	 * @type {string}
+	 */
+	this.typename = "";
+}
+
+
+module.exports = ExportOptionsSVG;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Application.html">Application</a></li><li><a href="Artboard.html">Artboard</a></li><li><a href="Artboards.html">Artboards</a></li><li><a href="Brush.html">Brush</a></li><li><a href="Brushes.html">Brushes</a></li><li><a href="CharacterAttributes.html">CharacterAttributes</a></li><li><a href="Characters.html">Characters</a></li><li><a href="CharacterStyle.html">CharacterStyle</a></li><li><a href="CharacterStyles.html">CharacterStyles</a></li><li><a href="CMYKColor.html">CMYKColor</a></li><li><a href="CompoundPathItem.html">CompoundPathItem</a></li><li><a href="CompoundPathItems.html">CompoundPathItems</a></li><li><a href="Dataset.html">Dataset</a></li><li><a href="Datasets.html">Datasets</a></li><li><a href="Document.html">Document</a></li><li><a href="DocumentPreset.html">DocumentPreset</a></li><li><a href="Documents.html">Documents</a></li><li><a href="EPSSaveOptions.html">EPSSaveOptions</a></li><li><a href="ExportOptionsAutoCAD.html">ExportOptionsAutoCAD</a></li><li><a href="ExportOptionsFlash.html">ExportOptionsFlash</a></li><li><a href="ExportOptionsGIF.html">ExportOptionsGIF</a></li><li><a href="ExportOptionsJPEG.html">ExportOptionsJPEG</a></li><li><a href="ExportOptionsPhotoshop.html">ExportOptionsPhotoshop</a></li><li><a href="ExportOptionsPNG8.html">ExportOptionsPNG8</a></li><li><a href="ExportOptionsPNG24.html">ExportOptionsPNG24</a></li><li><a href="ExportOptionsSVG.html">ExportOptionsSVG</a></li><li><a href="ExportOptionsTIFF.html">ExportOptionsTIFF</a></li><li><a href="FXGSaveOptions.html">FXGSaveOptions</a></li><li><a href="Gradient.html">Gradient</a></li><li><a href="GradientColor.html">GradientColor</a></li><li><a href="Gradients.html">Gradients</a></li><li><a href="GradientStop.html">GradientStop</a></li><li><a href="GradientStops.html">GradientStops</a></li><li><a href="GraphicStyle.html">GraphicStyle</a></li><li><a href="GraphicStyles.html">GraphicStyles</a></li><li><a href="GraphItem.html">GraphItem</a></li><li><a href="GraphItems.html">GraphItems</a></li><li><a href="GrayColor.html">GrayColor</a></li><li><a href="GroupItem.html">GroupItem</a></li><li><a href="GroupItems.html">GroupItems</a></li><li><a href="IllustratorSaveOptions.html">IllustratorSaveOptions</a></li><li><a href="ImageCaptureOptions.html">ImageCaptureOptions</a></li><li><a href="Ink.html">Ink</a></li><li><a href="InkInfo.html">InkInfo</a></li><li><a href="InsertionPoint.html">InsertionPoint</a></li><li><a href="InsertionPoints.html">InsertionPoints</a></li><li><a href="LabColor.html">LabColor</a></li><li><a href="Layer.html">Layer</a></li><li><a href="Layers.html">Layers</a></li><li><a href="LegacyTextItem.html">LegacyTextItem</a></li><li><a href="LegacyTextItems.html">LegacyTextItems</a></li><li><a href="Lines.html">Lines</a></li><li><a href="Matrix.html">Matrix</a></li><li><a href="MeshItem.html">MeshItem</a></li><li><a href="MeshItems.html">MeshItems</a></li><li><a href="NoColor.html">NoColor</a></li><li><a href="NonNativeItem.html">NonNativeItem</a></li><li><a href="NonNativeItems.html">NonNativeItems</a></li><li><a href="OpenOptions.html">OpenOptions</a></li><li><a href="OpenOptionsAutoCAD.html">OpenOptionsAutoCAD</a></li><li><a href="OpenOptionsFreeHand.html">OpenOptionsFreeHand</a></li><li><a href="OpenOptionsPhotoshop.html">OpenOptionsPhotoshop</a></li><li><a href="PageItem.html">PageItem</a></li><li><a href="PathItems.html">PathItems</a></li><li><a href="PathPoint.html">PathPoint</a></li><li><a href="PathPoints.html">PathPoints</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jan 24 2016 18:46:14 GMT+0800 (China Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

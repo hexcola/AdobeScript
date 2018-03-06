@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: CharacterAttributes.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: CharacterAttributes.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Specifies the properties of a character contained in a text frame. A CharacterStyle object associates these attributes with a specific text range through its characterAttributes property.
+ * 
+ * NOTE: Character attributes do not have default values, and are undefined until explicitly set.
+ * @constructor
+ */
+function CharacterAttributes() {
+
+	/** 
+	 * The amount of inter-character spacing to be added to the left side of the character, in thousandths of an em (that amount will not compress or expand during full-justification).
+	 * @type {number}
+	 */
+	var akiLeft;
+
+	/** 
+	 * The amount of inter-character spacing to be added to the right side of the character, in thousandths of an em (that amount will not compress or expand during full-justification).
+	 * @type {number}
+	 */
+	var akiRigh;
+
+
+	/** 
+	 * The character alignment type.
+	 * @type {StyleRunAlignmentType}
+	 */
+	var alignment;
+
+	/** 
+	 * The alternate glyphs form.
+	 * @type {AlternateGlyphsForm}
+	 */
+	var alternateGlyph;
+
+	/** 
+	 * If true, the automatic leading should be used.
+	 * @type {boolean}
+	 */
+	var autoLeading;
+
+	/** 
+	 * The Japanese text baseline direction.
+	 * @type {BaselineDirectionType}
+	 */
+	var baselineDirection;
+
+	/** 
+	 *  The baseline position of text.
+	 * @type {FontBaselineOption}
+	 */
+	var baselinePosition;
+
+	/** 
+	 * The amount of shift in points of the text baseline.
+	 * @type {number}
+	 */
+	var baselineShift;
+
+	/** 
+	 * The case of text.
+	 * @type {FontCapsOption}
+	 */
+	var capitalization;
+
+	/** 
+	 * If true, the OpenType® connection forms should be used.
+	 * @type {boolean}
+	 */
+	var connectionForms;
+
+
+	/** 
+	 * If true, the contextual ligature should be used.
+	 * @type {boolean}
+	 */
+	var contextualLigature;
+
+
+	/** 
+	 * If true, the discretionary ligature should be used.
+	 * @type {boolean}
+	 */
+	var discretionaryLigature;
+
+	/** 
+	 * The number style in an OpenType font.
+	 * @type {FigureStyleType}
+	 */
+	var figureStyle;
+
+	/** 
+	 * The color of the text fill.
+	 * @type {Color}
+	 */
+	var fillColor;
+
+	/** 
+	 * If true, the OpenType fractions should be used.
+	 * @type {boolean}
+	 */
+	var fractions;
+
+	/** 
+	 * The character horizontal scaling factor expressed as a percentage (100 = 100%).
+	 * @type {number}
+	 */
+	var horizontalScal;
+
+	/** 
+	 * If true, the Japanese OpenType font supports italics.
+	 * @type {boolean}
+	 */
+	var italics;
+
+	/** 
+	 * The automatic kerning method to use.
+	 * @type {AutoKernType}
+	 */
+	var kerningMethod;
+	/** 
+	 * The language of text.
+	 * @type {LanguageType}
+	 */
+	var language;
+
+	/** 
+	 * The amount of space between two lines of text, in points.
+	 * @type {number}
+	 */
+	var leading;
+
+
+	/** 
+	 * If true, the ligature should be used.
+	 * @type {boolean}
+	 */
+	var ligature;
+
+	/** 
+	 * If true, line breaks are not allowed.
+	 * @type {boolean}
+	 */
+	var noBreak;
+
+	/** 
+	 * The OpenType baseline position.
+	 * @type {FontOpenTypePositionOption}
+	 */
+	var openTypePosition;
+
+	/** 
+	 * If true, the OpenType ordinals should be used.
+	 * @type {boolean}
+	 */
+	var ordinals;
+	/** 
+	 * If true, the OpenType ornaments should be used.
+	 * @type {boolean}
+	 */
+	var ornaments;
+
+	/** 
+	 * If true, the fill of the text should be overprinted.
+	 * @type {boolean}
+	 */
+	var overprintFill;
+
+	/** 
+	 * If true, the stroke of the text should be overprinted.
+	 * @type {boolean}
+	 */
+	var overprintStroke;
+
+	/** 
+	 * Read-only. The object’s container.
+	 * @type {object}
+	 */
+	var parent;
+
+	/** 
+	 * If true, the Japanese OpenType font supports proportional glyphs.
+	 * @type {boolean}
+	 */
+	var proportionalMetrics;
+
+	/** 
+	 * The character rotation angle in degrees.
+	 * @type {number}
+	 */
+	var rotation;
+
+	/** 
+	 * Font size in points.
+	 * @type {number}
+	 */
+	var size;
+
+	/** 
+	 * If true, characters use strike-through style.
+	 * @type {boolean}
+	 */
+	var strikeThrough;
+
+	/** 
+	 * The color of the text stroke.
+	 * @type {Color}
+	 */
+	var strokeColor;
+
+	/** 
+	 * Line width of stroke.
+	 * @type {number}
+	 */
+	var strokeWeight;
+
+	/** 
+	 * If true, the OpenType stylistic alternates should be used.
+	 * @type {boolean}
+	 */
+	var stylisticAlternates;
+
+	/** 
+	 * If true, the OpenType swash should be used.
+	 * @type {boolean}
+	 */
+	var swash;
+
+	/** 
+	 * The Tate-Chu-Yoko horizontal adjustment in points.
+	 * @type {number}
+	 */
+	var tateChuYokoHorizontal;
+
+	/** 
+	 * The Tate-Chu-Yoko vertical adjustment in points.
+	 * @type {number}
+	 */
+	var tateChuYokoVertical;
+
+	/** 
+	 * The text font.
+	 * @type {TextFont}
+	 */
+	var textFon;
+
+	/** 
+	 * If true, the OpenType titling alternates should be used.
+	 * @type {boolean}
+	 */
+	var titling;
+
+	/** 
+	 * The tracking or range kerning amount, in thousandths of an em.
+	 * @type {number}
+	 */
+	var tracking;
+
+	/** 
+	 * The percentage of space reduction around a Japanese character.
+	 * @type {number}
+	 */
+	var Tsume;
+
+	/** 
+	 *  Read-only. The class name of the object.
+	 * @type {string}
+	 */
+	var typenam;
+
+	/** 
+	 * If true, characters are underlined.
+	 * @type {boolean}
+	 */
+	var underline;
+
+	/** 
+	 * Character vertical scaling factor expressed as a percentage (100 = 100%).
+	 * @type {number}
+	 */
+	var verticalScale;
+
+	/** 
+	 * Specifies how the characters in Wari-Chu text (an inset note in Japanese text) are divided into two or more lines.
+	 * @type {number}
+	 */
+	var wariChuCharactersAfterBreak;
+
+	/** 
+	 * Specifies how the characters in Wari-Chu text (an inset note in Japanese text) are divided into two or more lines.
+	 * @type {number}
+	 */
+	var wariChuCharactersBeforeBrea;
+
+	/** 
+	 * If true, Wari-Chu is enabled.
+	 * @type {boolean}
+	 */
+	var wariChuEnabled;
+
+	/** 
+	 * The Wari-Chu justification.
+	 * @type {WariChuJustificationType}
+	 */
+	var wariChuJustification;
+
+	/** 
+	 * The Wari-Chu line gap.
+	 * @type {number}
+	 */
+	var wariChuLineGap;
+
+	/** 
+	 * The number of Wari-Chu (multiple text lines fit into a space meant for one) lines.
+	 * 
+	 * @type {number}
+	 */
+	var wariChuLine;
+	/** 
+	 * The Wari-Chu scale.
+	 * @type {number}
+	 */
+	var wariChuScale;
+
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Application.html">Application</a></li><li><a href="Artboard.html">Artboard</a></li><li><a href="Artboards.html">Artboards</a></li><li><a href="Brush.html">Brush</a></li><li><a href="Brushes.html">Brushes</a></li><li><a href="CharacterAttributes.html">CharacterAttributes</a></li><li><a href="Characters.html">Characters</a></li><li><a href="CharacterStyle.html">CharacterStyle</a></li><li><a href="CharacterStyles.html">CharacterStyles</a></li><li><a href="CMYKColor.html">CMYKColor</a></li><li><a href="CompoundPathItem.html">CompoundPathItem</a></li><li><a href="CompoundPathItems.html">CompoundPathItems</a></li><li><a href="Dataset.html">Dataset</a></li><li><a href="Datasets.html">Datasets</a></li><li><a href="Document.html">Document</a></li><li><a href="DocumentPreset.html">DocumentPreset</a></li><li><a href="Documents.html">Documents</a></li><li><a href="EPSSaveOptions.html">EPSSaveOptions</a></li><li><a href="ExportOptionsAutoCAD.html">ExportOptionsAutoCAD</a></li><li><a href="ExportOptionsFlash.html">ExportOptionsFlash</a></li><li><a href="ExportOptionsGIF.html">ExportOptionsGIF</a></li><li><a href="ExportOptionsJPEG.html">ExportOptionsJPEG</a></li><li><a href="ExportOptionsPhotoshop.html">ExportOptionsPhotoshop</a></li><li><a href="ExportOptionsPNG8.html">ExportOptionsPNG8</a></li><li><a href="ExportOptionsPNG24.html">ExportOptionsPNG24</a></li><li><a href="ExportOptionsSVG.html">ExportOptionsSVG</a></li><li><a href="ExportOptionsTIFF.html">ExportOptionsTIFF</a></li><li><a href="FXGSaveOptions.html">FXGSaveOptions</a></li><li><a href="Gradient.html">Gradient</a></li><li><a href="GradientColor.html">GradientColor</a></li><li><a href="Gradients.html">Gradients</a></li><li><a href="GradientStop.html">GradientStop</a></li><li><a href="GradientStops.html">GradientStops</a></li><li><a href="GraphicStyle.html">GraphicStyle</a></li><li><a href="GraphicStyles.html">GraphicStyles</a></li><li><a href="GraphItem.html">GraphItem</a></li><li><a href="GraphItems.html">GraphItems</a></li><li><a href="GrayColor.html">GrayColor</a></li><li><a href="GroupItem.html">GroupItem</a></li><li><a href="GroupItems.html">GroupItems</a></li><li><a href="IllustratorSaveOptions.html">IllustratorSaveOptions</a></li><li><a href="ImageCaptureOptions.html">ImageCaptureOptions</a></li><li><a href="Ink.html">Ink</a></li><li><a href="InkInfo.html">InkInfo</a></li><li><a href="InsertionPoint.html">InsertionPoint</a></li><li><a href="InsertionPoints.html">InsertionPoints</a></li><li><a href="LabColor.html">LabColor</a></li><li><a href="Layer.html">Layer</a></li><li><a href="Layers.html">Layers</a></li><li><a href="LegacyTextItem.html">LegacyTextItem</a></li><li><a href="LegacyTextItems.html">LegacyTextItems</a></li><li><a href="Lines.html">Lines</a></li><li><a href="Matrix.html">Matrix</a></li><li><a href="MeshItem.html">MeshItem</a></li><li><a href="MeshItems.html">MeshItems</a></li><li><a href="NoColor.html">NoColor</a></li><li><a href="NonNativeItem.html">NonNativeItem</a></li><li><a href="NonNativeItems.html">NonNativeItems</a></li><li><a href="OpenOptions.html">OpenOptions</a></li><li><a href="OpenOptionsAutoCAD.html">OpenOptionsAutoCAD</a></li><li><a href="OpenOptionsFreeHand.html">OpenOptionsFreeHand</a></li><li><a href="OpenOptionsPhotoshop.html">OpenOptionsPhotoshop</a></li><li><a href="PageItem.html">PageItem</a></li><li><a href="PathItems.html">PathItems</a></li><li><a href="PathPoint.html">PathPoint</a></li><li><a href="PathPoints.html">PathPoints</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jan 24 2016 18:46:14 GMT+0800 (China Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: ExportOptionsFlash.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: ExportOptionsFlash.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Options for exporting a document as a Macromedia® Flash® (SWF) file, used with the exportFile method. All properties are optional.
+ * When you export a document, the appropriate file extension is appended automatically. You should not include any file extension in the file specification.
+ * @constructor
+ */
+function ExportOptionsFlash() {
+
+	/**
+	 * How the art should be clipped during output. Default: ArtClippingOption.OUTPUTARTBOUNDS
+	 * @type {ArtClippingOption}
+	 */
+	this.artClipping = ArtClippingOption.OUTPUTARTBOUNDS;
+
+	/**
+	 * If saveMultipleArtboards is true, this is considered for multi-asset extraction, which specifies the artboard range. An empty string extracts all the artboards. Default: empty string
+	 * @type {string}
+	 */
+	this.artboardRange = "";
+
+	/**
+	 * The background color of the exported Flash frames.
+	 * @type {RGBColor}
+	 */
+	this.backgroundColor =
+
+	/**
+	 *  A list of layers to be included as the static background of the exported Flash frames. Array of Layer
+	 *  @type {array}
+	 */
+	this.backgroundLayers = null;
+
+	/**
+	 * The animation type for blended objects. Default: BlendAnimationType.NOBLENDANIMATION
+	 * @type {BlendAnimationType}
+	 */
+	this.blendAnimation = BlendAnimationType.NOBLENDANIMATION;
+
+	/**
+	 * If true, the exported file should be exported compressed. Default: false
+	 * @type {boolean}
+	 */
+	this.compressed = false;
+
+	/**
+	 * If true, all text is converted to vector paths; preserves the visual appearance of type in all Flash players. Default: false
+	 * @type {boolean}
+	 */
+	this.convertTextToOutlines = false;
+
+
+	/**
+	 * The amount of curve information that should be presented. Default: 7 (long) 
+	 * @type {number}
+	 */
+	this.curveQuality = 7;
+
+	/**
+	 * If true, export all symbols defined in the palette. Default: false
+	 * @type {boolean}
+	 */
+	this.exportAllSymbols = false;
+
+	/**
+	 * The style in which the exported data should be created in Flash. Default: FlashExportStyle.ASFLASHFILE
+	 * @type {FlashExportStyle}
+	 */
+	this.exportStyle = FlashExportStyle.ASFLASHFILE;
+
+	/**
+	 *  The version of the exported SWF file. Default: FlashExportVersion.FlashVersion9.
+	 * @type {FlashExportVersion}
+	 */
+	this.exportVersion = FlashExportVersion.FlashVersion9;
+
+	/**
+	 * The display rate in frames per second. Range: 0.01–120.0. Default: 12.0 (double) 
+	 * @type {number}
+	 */
+	this.frameRate = 12.0;
+
+	/**
+	 * If true, ignore kerning information in text objects. Default: false
+	 * @type {boolean}
+	 */
+	this.ignoreTextKerning = false;
+
+	/**
+	 * How should the image in the exported Flash file be compressed. Default: FlashImageFormat.LOSSLESS
+	 * @type {FlashImageFormat}
+	 */
+	this.imageFormat = FlashImageFormat.LOSSLESS;
+
+	/**
+	 * If true, include minimal XMP metadata in the SWF file. Default: false
+	 * @type {boolean}
+	 */
+	this.includeMetadata = false;
+
+	/**
+	 * Specifies the JPEG method to use. Default: FlashJPEGMethod.Standard
+	 * @type {FlashJPEGMethod}
+	 */
+	this.jpegMethod = FlashJPEGMethod.Standard;
+
+	/**
+	 * Level of compression to use. Range 1 to 10. Default: 3 (long) 
+	 * @type {number}
+	 */
+	this.jpegQuality = 3;
+
+	/**
+	 * The order in which layers are exported to Flash frames. Default: LayerOrderType.BOTTOMUP
+	 * @type {LayerOrderType}
+	 */
+	this.layerOrder = LayerOrderType.BOTTOMUP;
+
+	/**
+	 * If true, the Flash file is set to loop when run. Default: false
+	 * @type {boolean}
+	 */
+	this.looping = false;
+
+	/**
+	 * The access level for the exported SWF file. Default: FlashPlaybackSecurity.PlaybackLocal
+	 * @type {FlashPlaybackSecurity}
+	 */
+	this.playbackAccess = FlashPlaybackSecurity.PlaybackLocal;
+
+	/**
+	 * If true, preserve appearance. If false, preserve editability. Default: false
+	 * @type {boolean}
+	 */
+	this.preserveAppearance = false;
+
+	/**
+	 * If true, export as read-only file. Default: false
+	 * @type {boolean}
+	 */
+	this.readOnly = false;
+
+	/**
+	 * If a file with the same name already exists, should it be replaced. Default: SaveOptions.PROMPTTOSAVECHANGES
+	 * @type {SaveOptions}
+	 */
+	this.replacing = SaveOptions.PROMPTTOSAVECHANGES;
+
+	/**
+	 * The resolution in pixels per inch. Range: 72–2400. Default: 72 (double) 
+	 * @type {number}
+	 */
+	this.resolution = 72;
+
+	/**
+	 * If true, all artboards or range of artboards are saved. Default: false
+	 * @type {boolean}
+	 */
+	this.saveMultipleArtboards = false;
+
+	/**
+	 * Read-only. The class name of the referenced object.
+	 * @type {string}
+	 */
+	this.typename = "";
+}
+
+
+module.exports = ExportOptionsFlash;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Application.html">Application</a></li><li><a href="Artboard.html">Artboard</a></li><li><a href="Artboards.html">Artboards</a></li><li><a href="Brush.html">Brush</a></li><li><a href="Brushes.html">Brushes</a></li><li><a href="CharacterAttributes.html">CharacterAttributes</a></li><li><a href="Characters.html">Characters</a></li><li><a href="CharacterStyle.html">CharacterStyle</a></li><li><a href="CharacterStyles.html">CharacterStyles</a></li><li><a href="CMYKColor.html">CMYKColor</a></li><li><a href="CompoundPathItem.html">CompoundPathItem</a></li><li><a href="CompoundPathItems.html">CompoundPathItems</a></li><li><a href="Dataset.html">Dataset</a></li><li><a href="Datasets.html">Datasets</a></li><li><a href="Document.html">Document</a></li><li><a href="DocumentPreset.html">DocumentPreset</a></li><li><a href="Documents.html">Documents</a></li><li><a href="EPSSaveOptions.html">EPSSaveOptions</a></li><li><a href="ExportOptionsAutoCAD.html">ExportOptionsAutoCAD</a></li><li><a href="ExportOptionsFlash.html">ExportOptionsFlash</a></li><li><a href="ExportOptionsGIF.html">ExportOptionsGIF</a></li><li><a href="ExportOptionsJPEG.html">ExportOptionsJPEG</a></li><li><a href="ExportOptionsPhotoshop.html">ExportOptionsPhotoshop</a></li><li><a href="ExportOptionsPNG8.html">ExportOptionsPNG8</a></li><li><a href="ExportOptionsPNG24.html">ExportOptionsPNG24</a></li><li><a href="ExportOptionsSVG.html">ExportOptionsSVG</a></li><li><a href="ExportOptionsTIFF.html">ExportOptionsTIFF</a></li><li><a href="FXGSaveOptions.html">FXGSaveOptions</a></li><li><a href="Gradient.html">Gradient</a></li><li><a href="GradientColor.html">GradientColor</a></li><li><a href="Gradients.html">Gradients</a></li><li><a href="GradientStop.html">GradientStop</a></li><li><a href="GradientStops.html">GradientStops</a></li><li><a href="GraphicStyle.html">GraphicStyle</a></li><li><a href="GraphicStyles.html">GraphicStyles</a></li><li><a href="GraphItem.html">GraphItem</a></li><li><a href="GraphItems.html">GraphItems</a></li><li><a href="GrayColor.html">GrayColor</a></li><li><a href="GroupItem.html">GroupItem</a></li><li><a href="GroupItems.html">GroupItems</a></li><li><a href="IllustratorSaveOptions.html">IllustratorSaveOptions</a></li><li><a href="ImageCaptureOptions.html">ImageCaptureOptions</a></li><li><a href="Ink.html">Ink</a></li><li><a href="InkInfo.html">InkInfo</a></li><li><a href="InsertionPoint.html">InsertionPoint</a></li><li><a href="InsertionPoints.html">InsertionPoints</a></li><li><a href="LabColor.html">LabColor</a></li><li><a href="Layer.html">Layer</a></li><li><a href="Layers.html">Layers</a></li><li><a href="LegacyTextItem.html">LegacyTextItem</a></li><li><a href="LegacyTextItems.html">LegacyTextItems</a></li><li><a href="Lines.html">Lines</a></li><li><a href="Matrix.html">Matrix</a></li><li><a href="MeshItem.html">MeshItem</a></li><li><a href="MeshItems.html">MeshItems</a></li><li><a href="NoColor.html">NoColor</a></li><li><a href="NonNativeItem.html">NonNativeItem</a></li><li><a href="NonNativeItems.html">NonNativeItems</a></li><li><a href="OpenOptions.html">OpenOptions</a></li><li><a href="OpenOptionsAutoCAD.html">OpenOptionsAutoCAD</a></li><li><a href="OpenOptionsFreeHand.html">OpenOptionsFreeHand</a></li><li><a href="OpenOptionsPhotoshop.html">OpenOptionsPhotoshop</a></li><li><a href="PageItem.html">PageItem</a></li><li><a href="PathItems.html">PathItems</a></li><li><a href="PathPoint.html">PathPoint</a></li><li><a href="PathPoints.html">PathPoints</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jan 24 2016 18:46:14 GMT+0800 (China Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

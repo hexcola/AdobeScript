@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: ExportOptionsSVG</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: ExportOptionsSVG</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>ExportOptionsSVG</h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="ExportOptionsSVG"><span class="type-signature"></span>new ExportOptionsSVG<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Options for exporting a document as a SVG file, used with the exportFile method. All properties are optional.When you export a document, the appropriate file extension is appended automatically. You should not include any file extension in the file specification.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line6">line 6</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="artboardRange"><span class="type-signature"></span>artboardRange<span class="type-signature"> :string</span></h4>
+
+
+
+
+<div class="description">
+    A range of artboards to save, if saveMultipleArtboards is true. A comma-delimited list of artboard names., or the empty string to save all artboards. Default: empty string
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line11">line 11</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="compressed"><span class="type-signature"></span>compressed<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    If true, the exported file should be compressed. Default: false
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line16">line 16</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="coordinatePrecision"><span class="type-signature"></span>coordinatePrecision<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    The decimal precision for element coordinate values. Range: 1 to 7. Default: 3 (long)
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line22">line 22</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="cssProperties"><span class="type-signature"></span>cssProperties<span class="type-signature"> :SVGCSSPropertyLocation</span></h4>
+
+
+
+
+<div class="description">
+    How the CSS properties of the document should be included in the exported file. Default: SVGCSSPropertyLocation.STYLEATTRIBUTES
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">SVGCSSPropertyLocation</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line28">line 28</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="documentEncoding"><span class="type-signature"></span>documentEncoding<span class="type-signature"> :SVGDocumentEncoding</span></h4>
+
+
+
+
+<div class="description">
+    How the text in the document should be encoded. Default: SVGDocumentEncoding.ASCII
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">SVGDocumentEncoding</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line34">line 34</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="DTD"><span class="type-signature"></span>DTD<span class="type-signature"> :SVGDTDVersion</span></h4>
+
+
+
+
+<div class="description">
+    The SVG version to which the file should conform. Default: SVGDTDVersion.SVG1_1
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">SVGDTDVersion</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line40">line 40</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="embedRasterImages"><span class="type-signature"></span>embedRasterImages<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    If true, the raster images contained in the document should be embedded in the exported file. Default: false
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line46">line 46</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="fontSubsetting"><span class="type-signature"></span>fontSubsetting<span class="type-signature"> :SVGFontSubsetting</span></h4>
+
+
+
+
+<div class="description">
+    Which font glyphs should be included in the exported file. Default: SVGFontSubsetting.ALLGLYPHS
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">SVGFontSubsetting</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line52">line 52</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="fontType"><span class="type-signature"></span>fontType<span class="type-signature"> :SVGFontType</span></h4>
+
+
+
+
+<div class="description">
+    The type of font to included in the exported file. Default: SVGFontType.CEFFONT
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">SVGFontType</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line58">line 58</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="includeFileInfo"><span class="type-signature"></span>includeFileInfo<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    If true, file information should be saved in the exported file. Default: false
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line64">line 64</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="includeUnusedStyles"><span class="type-signature"></span>includeUnusedStyles<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    If true, save unused styles in the exported file. Default: false
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line70">line 70</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="includeVariablesAndDatasets"><span class="type-signature"></span>includeVariablesAndDatasets<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    If true, variables and datasets should be saved in the exported file. Default: false
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line76">line 76</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="optimizeForSVGViewer"><span class="type-signature"></span>optimizeForSVGViewer<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    If true, the exported file should be optimized for the SVG Viewer. Default: false
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line82">line 82</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="preserveEditability"><span class="type-signature"></span>preserveEditability<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    If true, Illustrator editing capabilities should be preserved when exporting the document. Default: false
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line88">line 88</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="saveMultipleArtboards"><span class="type-signature"></span>saveMultipleArtboards<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    If true, save the artboards specified by artboardRange in the exported file. Default: false
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line94">line 94</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="slices"><span class="type-signature"></span>slices<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    If true, slice data should be exported with the file. Default: false
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line100">line 100</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="sVGAutoKerning"><span class="type-signature"></span>sVGAutoKerning<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    If true, SVG automatic kerning is allowed in the file. Default: false
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line106">line 106</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="sVGTextOnPath"><span class="type-signature"></span>sVGTextOnPath<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    If true, the SVG text-on-path construct is allowed in the file. Default: false
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line112">line 112</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="typename"><span class="type-signature"></span>typename<span class="type-signature"> :string</span></h4>
+
+
+
+
+<div class="description">
+    Read-only. The class name of the referenced object.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExportOptionsSVG.js.html">ExportOptionsSVG.js</a>, <a href="ExportOptionsSVG.js.html#line118">line 118</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Application.html">Application</a></li><li><a href="Artboard.html">Artboard</a></li><li><a href="Artboards.html">Artboards</a></li><li><a href="Brush.html">Brush</a></li><li><a href="Brushes.html">Brushes</a></li><li><a href="CharacterAttributes.html">CharacterAttributes</a></li><li><a href="Characters.html">Characters</a></li><li><a href="CharacterStyle.html">CharacterStyle</a></li><li><a href="CharacterStyles.html">CharacterStyles</a></li><li><a href="CMYKColor.html">CMYKColor</a></li><li><a href="CompoundPathItem.html">CompoundPathItem</a></li><li><a href="CompoundPathItems.html">CompoundPathItems</a></li><li><a href="Dataset.html">Dataset</a></li><li><a href="Datasets.html">Datasets</a></li><li><a href="Document.html">Document</a></li><li><a href="DocumentPreset.html">DocumentPreset</a></li><li><a href="Documents.html">Documents</a></li><li><a href="EPSSaveOptions.html">EPSSaveOptions</a></li><li><a href="ExportOptionsAutoCAD.html">ExportOptionsAutoCAD</a></li><li><a href="ExportOptionsFlash.html">ExportOptionsFlash</a></li><li><a href="ExportOptionsGIF.html">ExportOptionsGIF</a></li><li><a href="ExportOptionsJPEG.html">ExportOptionsJPEG</a></li><li><a href="ExportOptionsPhotoshop.html">ExportOptionsPhotoshop</a></li><li><a href="ExportOptionsPNG8.html">ExportOptionsPNG8</a></li><li><a href="ExportOptionsPNG24.html">ExportOptionsPNG24</a></li><li><a href="ExportOptionsSVG.html">ExportOptionsSVG</a></li><li><a href="ExportOptionsTIFF.html">ExportOptionsTIFF</a></li><li><a href="FXGSaveOptions.html">FXGSaveOptions</a></li><li><a href="Gradient.html">Gradient</a></li><li><a href="GradientColor.html">GradientColor</a></li><li><a href="Gradients.html">Gradients</a></li><li><a href="GradientStop.html">GradientStop</a></li><li><a href="GradientStops.html">GradientStops</a></li><li><a href="GraphicStyle.html">GraphicStyle</a></li><li><a href="GraphicStyles.html">GraphicStyles</a></li><li><a href="GraphItem.html">GraphItem</a></li><li><a href="GraphItems.html">GraphItems</a></li><li><a href="GrayColor.html">GrayColor</a></li><li><a href="GroupItem.html">GroupItem</a></li><li><a href="GroupItems.html">GroupItems</a></li><li><a href="IllustratorSaveOptions.html">IllustratorSaveOptions</a></li><li><a href="ImageCaptureOptions.html">ImageCaptureOptions</a></li><li><a href="Ink.html">Ink</a></li><li><a href="InkInfo.html">InkInfo</a></li><li><a href="InsertionPoint.html">InsertionPoint</a></li><li><a href="InsertionPoints.html">InsertionPoints</a></li><li><a href="LabColor.html">LabColor</a></li><li><a href="Layer.html">Layer</a></li><li><a href="Layers.html">Layers</a></li><li><a href="LegacyTextItem.html">LegacyTextItem</a></li><li><a href="LegacyTextItems.html">LegacyTextItems</a></li><li><a href="Lines.html">Lines</a></li><li><a href="Matrix.html">Matrix</a></li><li><a href="MeshItem.html">MeshItem</a></li><li><a href="MeshItems.html">MeshItems</a></li><li><a href="NoColor.html">NoColor</a></li><li><a href="NonNativeItem.html">NonNativeItem</a></li><li><a href="NonNativeItems.html">NonNativeItems</a></li><li><a href="OpenOptions.html">OpenOptions</a></li><li><a href="OpenOptionsAutoCAD.html">OpenOptionsAutoCAD</a></li><li><a href="OpenOptionsFreeHand.html">OpenOptionsFreeHand</a></li><li><a href="OpenOptionsPhotoshop.html">OpenOptionsPhotoshop</a></li><li><a href="PageItem.html">PageItem</a></li><li><a href="PathItems.html">PathItems</a></li><li><a href="PathPoint.html">PathPoint</a></li><li><a href="PathPoints.html">PathPoints</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jan 24 2016 18:46:15 GMT+0800 (China Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

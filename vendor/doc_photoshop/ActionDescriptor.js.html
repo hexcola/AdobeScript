@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: ActionDescriptor.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: ActionDescriptor.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * This object provides a dictionary-style mechanism for storing data as key-value pairs. It can be used for low-level access into Photoshop. See an example of this usage in ‘Selection sample script’ on page 169.
+ * 
+ * Many configuration files use serialized action descriptors to represent their data. It is used, for example, to encapsulate playback options in Application.playbackParameters, and is returned by Application.getCustomOptions().
+ *   
+ * @constructor
+ */
+function ActionDescriptor() {
+
+	/**
+	 * Read-only. The number of keys contained in the descriptor.
+	 * @type {number}
+	 */
+	this.count = 0;
+
+	/**
+	 * Read-only. The class name of the referenced actionDescriptor object.
+	 * @type {string}
+	 */
+	this.typename = "actions";
+}
+
+ActionDescriptor.prototype = {
+
+	/**
+	 * Clears the descriptor.
+	 */
+	clear: function() {},
+
+	/**
+	 * Erases a key from the descriptor.
+	 * @param {number} key
+	 */
+	erase: function(key) {},
+
+	/**
+	 * Creates a descriptor from a stream of bytes; for reading from disk.
+	 * @param {string} value
+	 */
+	fromStream: function(value) {},
+
+	/**
+	 * Gets the value of a key of type boolean.
+	 * @param {number} key
+	 * @return {boolean}
+	 */
+	getBoolean: function(key) {},
+
+	/**
+	 * Gets the value of a key of type class.
+	 * @param {number} key
+	 * @return {number}
+	 */
+	getClass: function(key) {},
+
+
+	/**
+	 * Gets raw byte data as a string value.
+	 * @param {number} key
+	 * @return {string}
+	 */
+	getData: function(key) {},
+
+	/**
+	 * Gets the value of a key of type double.
+	 * @param {number} key
+	 * @return {number}
+	 */
+	getDouble: function(key) {},
+
+
+	/**
+	 * Gets the enumeration type of a key.
+	 * @param {number} key
+	 * @return {number}
+	 */
+	getEnumerationType: function(key) {},
+
+
+	/**
+	 * Gets the enumeration value of a key.
+	 * @param {number} key
+	 * @return {number}
+	 */
+	getEnumerationValue: function(key) {},
+
+	/**
+	 * Gets the value of a key of type integer.
+	 * @param {number} key
+	 * @return {number}
+	 */
+	getInteger: function(key) {},
+
+	/**
+	 * Gets the ID of the Nth key, provided by index.
+	 * @param {number} key
+	 * @return {number}
+	 */
+	getKey: function(index) {},
+
+	/**
+	 * Gets the value of a key of type large integer.
+	 * @param {number} key
+	 * @return {number}
+	 */
+	getLargeInteger: function(key) {},
+
+	/**
+	 *  Gets the value of a key of type list.
+	 *  @param {number} key
+	 *  @return {ActionList}
+	 */
+	getList: function(key) {},
+
+	/**
+	 * Gets the class ID of an object in a key of type object.
+	 * @param {number} key
+	 * @return {number}
+	 */
+	getObjectType: function(key) {},
+
+
+	/**
+	 * Gets the value of a key of type object.
+	 * @param {number} key
+	 * @return {ActionDescriptor}
+	 */
+	getObjectValue: function(key) {},
+
+	/**
+	 * Gets the value of a key of type File.
+	 * @param {number} key
+	 * @return {File}
+	 */
+	getPath: function(key) {},
+
+	/**
+	 * Gets the value of a key of type ActionReference.
+	 * @param {number} key
+	 * @return {ActionReference}
+	 */
+	getReference: function(key) {},
+
+	/**
+	 * Gets the value of a key of type string.
+	 * @param {number} key
+	 * @return {string}
+	 */
+	getString: function(key) {},
+
+	/**
+	 * Gets the type of a key.
+	 * @param {number} key
+	 * @return {DescValueType}
+	 */
+	getType: function(key) {},
+
+	/**
+	 * Gets the unit type of a key of type UnitDouble.
+	 * @param {number} key
+	 * @return {number}
+	 */
+	getUnitDoubleType: function(key) {},
+
+	/**
+	 * Gets the value of a key of type UnitDouble.
+	 * @param {number} key
+	 * @return {number}
+	 */
+	getUnitDoubleValue: function(key) {},
+
+	/**
+	 * Checks whether the descriptor contains the provided key.
+	 * @param {number} key
+	 * @return {boolean}
+	 */
+	hasKey: function(key) {},
+
+	/**
+	 * Determines whether the descriptor is the same as another descriptor.
+	 * @param {ActionDescriptor} otherDesc
+	 * @return {boolean}
+	 */
+	isEqual: function(otherDesc) {},
+
+	/**
+	 * Sets the value for a key whose type is boolean.
+	 * @param {number} key
+	 * @param {boolean} value
+	 */
+	putBoolean: function(key, value) {},
+
+	/**
+	 * Sets the value for a key whose type is class.
+	 * @param {number} key
+	 * @param {number} value
+	 */
+	putClass: function(key, value) {},
+
+	/**
+	 * Puts raw byte data as a string value.
+	 * @param {number} key
+	 * @param {string} value
+	 */
+	putData: function(key, value) {},
+
+	/**
+	 * Sets the value for a key whose type is double.
+	 * @param {number} key
+	 * @param {number} value
+	 */
+	putDouble: function(key, value) {},
+
+	/**
+	 * Sets the enumeration type and value for a key.
+	 * @param {number} key
+	 * @param {number} enumType
+	 * @param {nunber} value
+	 */
+	putEnumerated: function(key, enumType, value) {},
+
+	/**
+	 * Sets the value for a key whose type is integer.
+	 * @param {number} key
+	 * @param {number} value
+	 */
+	putInteger: function(key, value) {},
+
+	/**
+	 * Sets the value for a key whose type is large integer.
+	 * @param {number} key
+	 * @param {number} value
+	 */
+	putLargeInteger: function(key, value) {},
+
+	/**
+	 * Sets the value for a key whose type is an ActionList object.
+	 * @param {number} key
+	 * @param {ActionList} value
+	 */
+	putList: function(key, value) {},
+
+	/**
+	 * Sets the value for a key whose type is an object, represented by an Action Descriptor.
+	 * @param {number} key
+	 * @param {number} classID
+	 * @param {ActionDescriptor} value
+	 */
+	putObject: function(key, classID, value) {},
+
+	/**
+	 * Sets the value for a key whose type is path. 
+	 * @param {number} key
+	 * @param {File} value
+	 */
+	putPath: function(key, value) {},
+
+	/**
+	 * Sets the value for a key whose type is an object reference.
+	 * @param {number} key
+	 * @param {ActionReference} value
+	 */
+	putReference: function(key, value) {},
+
+	/**
+	 *  Sets the value for a key whose type is string.
+	 *  @param {number} key
+	 *  @param {string} value
+	 */
+	putString: function(key, value) {},
+
+	/**
+	 *  Sets the value for a key whose type is a unit value formatted as a double.
+	 *  @param {number} key
+	 *  @param {number} unitID
+	 *  @param {number} value
+	 */
+	putUnitDouble: function(key, unitID, value) {},
+
+	/**
+	 * Gets the entire descriptor as a stream of bytes, for writing to disk.
+	 * @return {string}
+	 */
+	toStream: function() {}
+};
+
+module.exports = ActionDescriptor;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ActionDescriptor.html">ActionDescriptor</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Thu Jan 14 2016 20:08:05 GMT+0800 (China Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

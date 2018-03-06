@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: MeshItem.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: MeshItem.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * A gradient mesh art item. You cannot create mesh items from a script. However, you can copy an existing mesh item with the duplicate method, then use the one of the move methods to place the copy at the proper location.
+ * 
+ * @constructor
+ */
+function MeshItem() {
+	/**
+	 * Is this object used to create a knockout, and if so, what kind of knockout.
+	 * @type {KnockoutState}
+	 */
+	this.artworkKnockout = null;
+
+
+	/**
+	 * The blend mode used when compositing an object.
+	 * @type {BlendModes}
+	 */
+	this.blendingMode = null;
+
+	/**
+	 * Read-only. The bounds of the object including stroke width and controls. array of 4 numbers 
+	 * @type {array}
+	 */
+	this.controlBounds = [0, 0, 0, 0];
+
+	/**
+	 * Read-only. If true, this item is editable.
+	 * @type {boolean}
+	 */
+	this.editable = false;
+
+	/**
+	 * Read-only. The bounds of the object excluding stroke width. array of 4 numbers 
+	 * @type {array}
+	 */
+	this.geometricBounds = [0, 0, 0, 0];
+
+	/**
+	 * The height of the group item.  number (double) 
+	 * @type {number}
+	 */
+	this.height = 0.0;
+
+	/**
+	 * If true, this item is hidden.
+	 * @type {boolean}
+	 */
+	this.hidden = false;
+
+	/**
+	 * If true, this object is isolated.
+	 * @type {boolean}
+	 */
+	this.isIsolated = false;
+
+	/**
+	 * Read-only. The layer to which this item belongs.
+	 * @type {Layer}
+	 */
+	this.layer = null;
+
+	/**
+	 * The position of the left side of the item (in points, measured from the left side of the page). number (double) 
+	 * @type {number}
+	 */
+	this.left = 0.0;
+
+	/**
+	 * If true, this item is locked.
+	 * @type {boolean}
+	 */
+	this.locked = false;
+
+	/**
+	 * The name of this item.
+	 * @type {string}
+	 */
+	this.name = "";
+
+	/**
+	 * The note assigned to this item.
+	 * @type {string}
+	 */
+	this.note = "";
+
+	/**
+	 * The opacity of the object. Range: 0.0 to 100.0  number (double) 
+	 * @type {number}
+	 */
+	this.opacity = 0.0;
+
+	/**
+	 * Read-only. The parent of this object.
+	 * @type {Layer|GroupItem}
+	 */
+	this.parent = null;
+
+	/**
+	 * The position (in points) of the top left corner of the meshItem object in the format [x, y]. Does not include stroke weight. array of 2 numbers 
+	 * @type {array}
+	 */
+	this.position = [0, 0];
+
+	/**
+	 * If true, this item is selected.
+	 * @type {boolean}
+	 */
+	this.selected = false;
+
+	/**
+	 * If true, the item sliced. Default: false
+	 * @type {boolean}
+	 */
+	this.sliced = false;
+
+	/**
+	 * Read-only. The tags contained in this item.
+	 * @type {Tags}
+	 */
+	this.tags = null;
+
+	/**
+	 *  The position of the top of the item (in points, measured from the bottom of the page). number (double)
+	 *  @type {number}
+	 */
+	this.top = 0.0;
+
+	/**
+	 * Read-only. The class name of the referenced object.
+	 * @type {string}
+	 */
+	this.typename = "";
+
+	/**
+	 * The value of the Adobe URL tag assigned to this item.
+	 * @type {string}
+	 */
+	this.uRL = "";
+
+	/**
+	 * The visibility variable bound to the item.
+	 * @type {Variable}
+	 */
+	this.visibilityVariable = null;
+
+	/**
+	 * Read-only. The visible bounds of the item including stroke width. array of 4 numbers 
+	 * @type {array}
+	 */
+	this.visibleBounds = [0, 0, 0, 0];
+
+	/**
+	 * The width of the item. number (double) 
+	 * @type {number}
+	 */
+	this.width = 0.0;
+
+	/**
+	 * If true, the text frame object should be wrapped inside this object.
+	 * @type {boolean}
+	 */
+	this.wrapInside = false;
+
+	/**
+	 * The offset to use when wrapping text around this object.  number (double) 
+	 * @type { number}
+	 */
+	this.wrapOffset = 0.0;
+
+	/**
+	 * If true, wrap text frame objects around this object (text frame must be above the object).
+	 * @type {boolean}
+	 */
+	this.wrapped = false;
+
+	/**
+	 * Read-only. The position of this item within the stacking order of the group or layer (parent) that contains the item. number (long) 
+	 * @type {number}
+	 */
+	this.zOrderPosition = 0;
+
+}
+
+MeshItem.prototype = {
+	/**
+	 * Creates a duplicate of the selected object.
+	 * 
+	 * @param {object} relativeObject  No description
+	 * @param {ElementPlacement} insertionLocation No description
+	 * @return {MeshItem} No description
+	 */
+	duplicate: function(relativeObject, insertionLocation) {},
+
+	/**
+	 * Moves the object.
+	 * 
+	 * @param {object} relativeObject No description
+	 * @param {ElementPlacement} insertionLocation No description
+	 * @return {MeshItem}  No description
+	 */
+	move: function(relativeObject, insertionLocation) {},
+
+	/**
+	 * Deletes this object.
+	 */
+	remove: function() {},
+
+	/**
+	 * Scales the art item where scaleX is the horizontal scaling factor and scaleY is the vertical scaling factor.100.0 = 100 % .
+	 * @param {number} scaleX double
+	 * @param {number} scaleY double
+	 * @param {boolean} changePositions No description
+	 * @param {boolean} changeFillPatterns No description
+	 * @param {boolean} changeFillGradients No description
+	 * @param {boolean} changeStrokePatern No description
+	 * @param {number} changeLineWidths double
+	 * @param {Transformation} scaleAbout No description
+	 */
+	resize: function(scaleX, scaleY, changePositions, changeFillPatterns, changeFillGradients, changeStrokePatern, changeLineWidths, scaleAbout) {},
+
+	/**
+	 * Rotates the art item relative to the current rotation.The object is rotated counter - clockwise if the angle value is positive, clockwise if the value is negative.
+	 * @param {number} angle double
+	 * @param {boolean} changePositions No description
+	 * @param {boolean} changeFillPatterns No description
+	 * @param {boolean} changeFillGradients No description
+	 * @param {boolean} changeStrokePattern No description
+	 * @param {Transformation} rotateAbout No description
+	 */
+	rotate: function(angle, changePositions, changeFillPatterns, changeFillGradients, changeStrokePattern, rotateAbout) {},
+
+	/**
+	 * Transforms the art item by applying a transformation matrix.
+	 * @param {Matrix} transformationMatrix  No description
+	 * @param {boolean} changePositions  No description
+	 * @param {boolean} changeFillPatterns  No description
+	 * @param {boolean} changeFillGradients  No description
+	 * @param {boolean} changeStrokePattern  No description
+	 * @param {number} changeLineWidths double
+	 * @param {Transformation} transformAbout  No description
+	 */
+	transform: function(transformationMatrix, changePositions, changeFillPatterns, changeFillGradients, changeStrokePattern, changeLineWidths, transformAbout) {},
+
+	/**
+	 * Repositions the art item relative to the current position, where deltaX is the horizontal offset and deltaY is the vertical offset.
+	 * @param {number} deltaX double
+	 * @param {number} deltaY double
+	 * @param {boolean} transformObjects No description
+	 * @param {boolean} transformFillPatterns No description
+	 * @param {boolean} transformFillGradients No description
+	 * @param {boolean} transformStrokePatterns No description
+	 */
+	translate: function(deltaX, deltaY, transformObjects, transformFillPatterns, transformFillGradients, transformStrokePatterns) {},
+
+	/**
+	 * Arranges the art item’ s position in the stacking order of the group or layer(parent) of this object.
+	 * @param {ZOrderMethod} zOrderCmd No description
+	 */
+	zOrder: function(zOrderCmd) {}
+
+};
+
+
+module.exports = MeshItem;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Application.html">Application</a></li><li><a href="Artboard.html">Artboard</a></li><li><a href="Artboards.html">Artboards</a></li><li><a href="Brush.html">Brush</a></li><li><a href="Brushes.html">Brushes</a></li><li><a href="CharacterAttributes.html">CharacterAttributes</a></li><li><a href="Characters.html">Characters</a></li><li><a href="CharacterStyle.html">CharacterStyle</a></li><li><a href="CharacterStyles.html">CharacterStyles</a></li><li><a href="CMYKColor.html">CMYKColor</a></li><li><a href="CompoundPathItem.html">CompoundPathItem</a></li><li><a href="CompoundPathItems.html">CompoundPathItems</a></li><li><a href="Dataset.html">Dataset</a></li><li><a href="Datasets.html">Datasets</a></li><li><a href="Document.html">Document</a></li><li><a href="DocumentPreset.html">DocumentPreset</a></li><li><a href="Documents.html">Documents</a></li><li><a href="EPSSaveOptions.html">EPSSaveOptions</a></li><li><a href="ExportOptionsAutoCAD.html">ExportOptionsAutoCAD</a></li><li><a href="ExportOptionsFlash.html">ExportOptionsFlash</a></li><li><a href="ExportOptionsGIF.html">ExportOptionsGIF</a></li><li><a href="ExportOptionsJPEG.html">ExportOptionsJPEG</a></li><li><a href="ExportOptionsPhotoshop.html">ExportOptionsPhotoshop</a></li><li><a href="ExportOptionsPNG8.html">ExportOptionsPNG8</a></li><li><a href="ExportOptionsPNG24.html">ExportOptionsPNG24</a></li><li><a href="ExportOptionsSVG.html">ExportOptionsSVG</a></li><li><a href="ExportOptionsTIFF.html">ExportOptionsTIFF</a></li><li><a href="FXGSaveOptions.html">FXGSaveOptions</a></li><li><a href="Gradient.html">Gradient</a></li><li><a href="GradientColor.html">GradientColor</a></li><li><a href="Gradients.html">Gradients</a></li><li><a href="GradientStop.html">GradientStop</a></li><li><a href="GradientStops.html">GradientStops</a></li><li><a href="GraphicStyle.html">GraphicStyle</a></li><li><a href="GraphicStyles.html">GraphicStyles</a></li><li><a href="GraphItem.html">GraphItem</a></li><li><a href="GraphItems.html">GraphItems</a></li><li><a href="GrayColor.html">GrayColor</a></li><li><a href="GroupItem.html">GroupItem</a></li><li><a href="GroupItems.html">GroupItems</a></li><li><a href="IllustratorSaveOptions.html">IllustratorSaveOptions</a></li><li><a href="ImageCaptureOptions.html">ImageCaptureOptions</a></li><li><a href="Ink.html">Ink</a></li><li><a href="InkInfo.html">InkInfo</a></li><li><a href="InsertionPoint.html">InsertionPoint</a></li><li><a href="InsertionPoints.html">InsertionPoints</a></li><li><a href="LabColor.html">LabColor</a></li><li><a href="Layer.html">Layer</a></li><li><a href="Layers.html">Layers</a></li><li><a href="LegacyTextItem.html">LegacyTextItem</a></li><li><a href="LegacyTextItems.html">LegacyTextItems</a></li><li><a href="Lines.html">Lines</a></li><li><a href="Matrix.html">Matrix</a></li><li><a href="MeshItem.html">MeshItem</a></li><li><a href="MeshItems.html">MeshItems</a></li><li><a href="NoColor.html">NoColor</a></li><li><a href="NonNativeItem.html">NonNativeItem</a></li><li><a href="NonNativeItems.html">NonNativeItems</a></li><li><a href="OpenOptions.html">OpenOptions</a></li><li><a href="OpenOptionsAutoCAD.html">OpenOptionsAutoCAD</a></li><li><a href="OpenOptionsFreeHand.html">OpenOptionsFreeHand</a></li><li><a href="OpenOptionsPhotoshop.html">OpenOptionsPhotoshop</a></li><li><a href="PageItem.html">PageItem</a></li><li><a href="PathItems.html">PathItems</a></li><li><a href="PathPoint.html">PathPoint</a></li><li><a href="PathPoints.html">PathPoints</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jan 24 2016 18:46:15 GMT+0800 (China Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
